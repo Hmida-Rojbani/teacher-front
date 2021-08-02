@@ -29,13 +29,13 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <div class="row">
-        <div class="col sm-4">
-          <button class="btn btn-outline-primary my-2 my-sm-0 " type="signup" >Register</button>
+        <div class="col sm-4" *ngIf="!isLoggedIn">
+          <button class="btn btn-outline-primary my-2 my-sm-0 " type="signup" routerLink="register">Register</button>
         </div>
-        <div class="col sm-4">
-          <button class="btn btn-outline-success my-2 my-sm-0 " type="login" >Login</button>
+        <div class="col sm-4" *ngIf="!isLoggedIn">
+          <button class="btn btn-outline-success my-2 my-sm-0 " type="login" routerLink="login">Login</button>
         </div>
-        <div class="col sm-4">
+        <div class="col sm-4" *ngIf="isLoggedIn">
           <button class="btn btn-outline-danger my-2 my-sm-0" type="logout">Logout</button>
         </div>
       </div>
